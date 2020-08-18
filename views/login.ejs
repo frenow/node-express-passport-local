@@ -1,0 +1,27 @@
+<html>
+<head>
+	<script>
+		function message() {
+			const queryString = window.location.search;
+			const urlParams = new URLSearchParams(queryString);
+			const message = urlParams.get('message');
+			if (message){ alert(message); }			
+		}
+		</script>
+</head>
+<body onload="message()">
+<form action="/login" method="post">
+	<div>
+	<label>Username:</label>
+	<input type="text" name="username"/><br/>
+	</div>
+	<div>
+	<label>Password:</label>
+	<input type="password" name="password"/>
+	</div>
+	<div>
+	<input type="submit" value="Submit"/>
+	</div>
+</form>
+</body>
+</html>
